@@ -23,7 +23,7 @@ function Expenses(props)
         <Card className="expenses">
         <ExpensesFilter selected={year} onFilterChange={onFilterChangeHandler}></ExpensesFilter>
         <ExpensesChart expenses={filteredExpenses}></ExpensesChart>
-        {filteredExpenses.length===0 ? <h3 className='empty_list'>No Expenses Found.Would you like to add some expenses ? </h3> : (filteredExpenses.map(expense=>(
+        {filteredExpenses.length===0 ? <h3 className='empty_list'>No Expenses Found. </h3> : (filteredExpenses.map(expense=>(
             <ExpenseItem amount={expense.amount} title={expense.title} date={expense.date}></ExpenseItem>
         )))}
         </Card>
